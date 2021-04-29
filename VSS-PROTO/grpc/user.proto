@@ -1,0 +1,13 @@
+syntax = "proto3";
+package proto;
+import "google/protobuf/timestamp.proto";
+
+service UserService {
+  rpc UserRPC (User) returns (User) {}
+}
+
+message User {
+    string Username = 1;
+    string Password = 2;
+    google.protobuf.Timestamp Created = 3;
+}
